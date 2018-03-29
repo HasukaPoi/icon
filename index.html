@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="Stylesheet" type="text/css" href="style.css">
+    <title>自定义图标快捷方式生成器</title>
+    <script type="text/javascript" src="https://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h3>自定义图标快捷方式生成器</h3>
+    <div>
+        目标URL(必填)
+        <input type="text" placeholder="https://www.github.com">
+    </div>
+    <div>
+        图标图片(自动切割为250*250)
+        <input type="file" id="fileBk">
+    </div>
+    <div><button id="gen"></button></div>
+    图像预览：
+    <br>
+    <canvas id="myCanvas" width="250" height="250" display="block">您的浏览器不支持Canvas，无法使用该工具。</canvas>
+</body>
