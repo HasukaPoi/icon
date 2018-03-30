@@ -15,15 +15,14 @@
     <h3>自定义图标快捷方式生成器</h3>
     <div>
         目标URL(必填)
-        <input type="text" placeholder="https://www.github.com">
+        <input type="text" id="url" placeholder="https://www.github.com"><span></span>
     </div>
     <div>
         图标图片(自动切割为250*250)
         <input type="file" id="fileBk">
     </div>
-    <div><button id="gen">生成</button></div>
+    <div><button id="gen" disabled>生成</button></div>
     图像预览：
     <br>
     <canvas id="myCanvas" width="250" height="250" display="block"></canvas>
-    <iframe src="test.html" id="iframe"></iframe>
 </body>
