@@ -40,10 +40,10 @@ $(document).ready(function () {
         var re = /^.+:\/\/.*$/;
         if(!re.test(this.value)){
             $(this).next("span").text('URL非法')
-            $("#gen").attr("disabled","true")
+            //$("#gen").attr("disabled","true")
         }else{
             $(this).next("span").text('')
-            $("#gen").removeAttr("disabled")
+            //$("#gen").removeAttr("disabled")
         }
     });
 
