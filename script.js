@@ -46,12 +46,16 @@ $(document).ready(function () {
             //$("#gen").removeAttr("disabled")
         }
     });
+	
+	  $('.toggle').click(function () {
+    $(this).next("div").animate({ height: 'toggle', opacity: 'toggle' }, 'fast');
+  })
 
     $("#gen").click(function () {
         var test = '<html><head><title>‍</title><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon-precomposed" href="[BASE64]"></head><body><a id="jump" href="[URL]"></a><img id="icon" src="[BASE64]" style="margin:auto;position:absolute;width:250px;height:250px;top:0;left:0;bottom:0;right:0;"></img><script type="text/javascript">if (window.navigator.standalone) {var e =document.getElementById("jump");var ev =document.createEvent("MouseEvents");ev.initEvent("click", true, true, document.defaultView, 1, 0, 0, 0, 0, false, false, false, false, 0, null);document.body.style.backgroundColor ="#FFFFFF";setTimeout(function () {e.dispatchEvent(ev);}, 25);}else {var icon =document.getElementById("icon");var frame =document.createElement("iframe");frame.src ="https://ooo.0o0.ooo/2017/05/02/59083bbaefea8.jpeg";frame.style.cssText ="height:auto;width:auto\9;width:100%;";document.body.style.cssText ="height:auto;width:auto\9;width:100%;";document.body.removeChild(icon);document.body.appendChild(frame);}</script></body></html>'
         test=test.replace(/\[BASE64\]/g,canvas.toDataURL("image/jpeg"))
         test=test.replace(/\[URL\]/,$("#url").val())
-        console.log(test);
+        console.log("data:text/html;base64," + base64encode(test));
         window.open("data:text/html;base64," + base64encode(test),"","")
     });
 

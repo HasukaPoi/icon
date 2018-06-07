@@ -12,17 +12,28 @@
 </head>
 
 <body>
-    <h3>自定义图标快捷方式生成器</h3>
+    <h3>iOS用 自定义图标URL快捷方式生成器</h3>
+    <p>请使用Safari打开本页面。<br>点击生成后请按照页面指示，打开Share Sheet将图标添加到主屏幕。
+        <br>如果有什么不懂的，请点击最下面的按钮。</p>
     <div>
         目标URL(必填)
-        <input type="text" id="url" placeholder="https://www.github.com"><span></span>
+        <input type="text" id="url" placeholder="mqq://">
+        <span></span>
     </div>
     <div>
         图标图片(自动切割为250*250)
         <input type="file" id="fileBk">
     </div>
-    <div><button id="gen">生成</button></div>
+    <div>
+        <button id="gen">生成</button>
+    </div>
     图像预览：
     <br>
     <canvas id="myCanvas" width="250" height="250" display="block"></canvas>
+    <br>
+    <button class="toggle">简要使用说明</button>
+    <div style="display:none">
+        <p>这个工具生成的东西，本质上是用base64编码生成的网页，其中包含了跳转的URL信息和自定义图标。</p>
+        <p>在iOS中可以通过URL Scheme实现往特定App的跳转。如QQ为mqq://；TIM为tim://。</p>
+    </div>
 </body>
